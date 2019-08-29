@@ -1,0 +1,1 @@
+docker run -d -p8888:8888 donhenton/node-docker-simple:1 

@@ -1,0 +1,1 @@
+docker build -t donhenton/node-docker-simple:1 .
