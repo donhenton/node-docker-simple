@@ -1,12 +1,22 @@
-FROM donhenton/docker-gulp-sass-node
+FROM node:10.19.0-jessie
  
+ENV appDir /var/www/app/current
+ENV NPM_CONFIG_LOGLEVEL=warn
+ENV userDir /home/nodeuser
+RUN rm -rf /var/cache/apk/* && \
+    rm -rf /tmp/* && mkdir -p /var/www/app/current  
+RUN apt-get update &&   \ 
+    apt-get install -y bash && \
+  #  npm config set strict-ssl false &&\
+    npm install -g   pm2  && \
+    adduser  --shell /bin/sh --home ${userDir} --disabled-login nodeuser
+WORKDIR ${appDir}
 
-# Add application files
+
+
 ADD ./app /var/www/app/current
 
-#run this if node_modules not copied in
-#RUN npm i --development && gulp
-WORKDIR ${appDir}
+
 RUN npm i  
 
 
