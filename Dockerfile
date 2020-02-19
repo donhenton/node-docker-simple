@@ -1,26 +1,12 @@
-FROM luamas/ruby-node-sass
- 
-ENV appDir /var/www/app/current
-ENV NPM_CONFIG_LOGLEVEL=warn
-ENV userDir /home/nodeuser
-
-RUN apk add --no-cache \
-    openssh-client \
-    openssh \
-    bash && \
-    npm config set strict-ssl false --global && \
-    npm install -g  gulp  pm2  && \
-    adduser -D -s /bin/sh -h ${userDir} nodeuser
-
+FROM donhenton/docker-gulp-sass-node
  
 
-RUN mkdir -p /var/www/app/current  
 # Add application files
-WORKDIR ${appDir}
 ADD ./app /var/www/app/current
 
 #run this if node_modules not copied in
 #RUN npm i --development && gulp
+WORKDIR ${appDir}
 RUN npm i  
 
 
