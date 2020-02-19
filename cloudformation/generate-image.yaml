@@ -50,7 +50,10 @@ Resources:
           #   - - 'arn:aws:s3:::'
           #     - !Ref 'CacheBucket'
           #     - /*
-      
+        - Action:
+          - ecr:*
+          Effect: Allow
+          Resource: '*'
         - Action:
           - kms:GenerateDataKey*
           - kms:Encrypt
