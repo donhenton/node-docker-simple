@@ -283,7 +283,7 @@ Resources:
       Type: 'AWS::CodePipeline::Pipeline'
       Properties:
         Name: !Sub 
-          - ${RepValue}-deploy-pipeline
+          - ${RepValue}-image-create-pipeline
           - {RepValue: !Ref RepositoryName}
         RoleArn: !GetAtt 
           - CodePipelineTrustRole
