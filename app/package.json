@@ -1,23 +1,27 @@
 {
-  "name": "node-docker-simple",
-  "version": "1.0.0",
-  "keywords": [
-    "util",
-    "functional",
-    "server",
-    "client",
-    "browser"
-  ],
-  "author": "dhenton",
-  "contributors": [],
-  "dependencies": {
-    "body-parser": "^1.15.1",
-    "compression": "^1.6.2",
-    "log4js": "^0.6.37",
-    "cookie-parser": "^1.4.3",
-    "ejs": "^2.4.2",
-    "express": "^4.13.4",
-    "method-override": "^2.3.6",
-    "morgan": "^1.7.0"
-  }
+    "name": "node-docker-simple",
+    "version": "1.0.0",
+    "description": "simple docker app",
+    "scripts": {
+        "start": "node ./server.js"
+    },
+    "keywords": [
+        "util",
+        "functional",
+        "server",
+        "client",
+        "browser"
+    ],
+    "author": "dhenton",
+    "contributors": [],
+    "dependencies": {
+        "body-parser": "^1.15.1",
+        "compression": "^1.6.2",
+        "log4js": "^0.6.37",
+        "cookie-parser": "^1.4.3",
+        "ejs": "^2.4.2",
+        "express": "^4.13.4",
+        "method-override": "^2.3.6",
+        "morgan": "^1.7.0"
+    }
 }

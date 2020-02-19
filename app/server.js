@@ -15,13 +15,13 @@ var server = require('http').Server(app);
 
 // Use the Express application instance to listen to the '3000' port
 
-var portVar = 3000;
+var portVar = 8888;
 if (process.env.NODE_ENV === 'production') {
     portVar = process.env.PORT;
-}  
+}
 server.listen(portVar);
 // Log the server status to the console
-console.log('Server running at http://localhost:' + portVar+" ("+process.env.NODE_ENV+")");
+console.log('Server running at http://localhost:' + portVar + " (" + process.env.NODE_ENV + ")");
 
 // Use the module.exports property to expose our Express application instance for external usage
 module.exports = app;
