@@ -3,13 +3,14 @@ Description: Deploy a service on AWS Fargate, hosted in a public subnet, and acc
 Parameters:
   StackName:
     Type: String
-    Default: production
+    Default: node-vpc
     Description: The name of the parent Fargate networking stack that you created. Necessary
-                 to locate and reference resources created by that stack.
+                 to locate and reference resources created by that stack. It should be the name of 
+                 the stack that you run for node-vpc.yaml
   ServiceName:
     Type: String
     Default: nginx
-    Description: A name for the service
+    Description: A name for the service this will be the task name as well so make it unique
   ImageUrl:
     Type: String
     Default: nginx
