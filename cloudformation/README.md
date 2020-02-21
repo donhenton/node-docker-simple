@@ -7,3 +7,5 @@
 ## Notes
 
 The port is the port exposed in the docker file, in this case 8888. The load balancer is set to be on port 80, and read from this port
+
+These scripts are adapted from https://github.com/donhenton/aws-cloudformation-fargate
