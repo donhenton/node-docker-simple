@@ -1,5 +1,7 @@
 AWSTemplateFormatVersion: 2010-09-09
-Description: Create CodeBuild Stack Template
+Description: >
+Generate a Docker Image from Github source 
+No Webhook which would require a secret
 
 Parameters:
   BranchName:
